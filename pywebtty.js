@@ -25,16 +25,17 @@ t.onTerminalReady = function() {
     var io = t.io.push();
     // t.io.print(info);
 
-    t.io.println(info[0]);
-    t.io.println(info[1]);
-    t.io.println(info[2]);
-    t.io.println(info[3]);
-    t.io.println(info[4]);
-    t.io.println(info[5]);
+    io.println(info[0]);
+    io.println(info[1]);
+    io.println(info[2]);
+    io.println(info[3]);
+    io.println(info[4]);
+    io.println(info[5]);
 
     // t.io.println()
     io.onVTKeystroke = function(str) {
-        console.log("Keystroke");
+        console.log(str);
+        io.print(str);
      // For example, Secure Shell forwards the string onto the NaCl plugin.
     };
 
